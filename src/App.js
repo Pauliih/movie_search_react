@@ -19,7 +19,7 @@ class App extends Component {
 
   _renderResults() {    
     return this.state.results.length === 0
-      ? <p>\u1F914 Sorry! 0 results founded...</p>
+      ? <p> <span role='img' aria-label='emoji'>🤔</span> Sorry! 0 results founded...</p>
     // Renderizamos pasando la prop movies que tendrá como valor el state results donde estan todas las peliculas encontradas
     : <MoviesList movies={this.state.results} />
   }

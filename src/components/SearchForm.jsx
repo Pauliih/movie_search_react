@@ -26,7 +26,7 @@ export class SearchForm extends Component {
     .then(results => {
       // Extraemos la propiedad Search
       // Destructuring (results.Search y results.totalResults)
-      const { Search, totalResults} = results;
+      const { Search = [], totalResults = ''} = results;
       console.log({Search, totalResults})
       // propiedad Search con resultados que tendrá el metodo que actualice el state en App.js
       this.props.onResults(Search);
