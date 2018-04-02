@@ -13,8 +13,8 @@ export class Movie extends Component {
     const {poster, title, year} = this.props;
     // devolvemos una card con la informacion que rescatamos
     return (
-      <div className="card">
-        <div className="card-image">
+      <div className="card card-css">
+        <div className="card-image card-image-css">
           <figure className="image is-4by3">
             <img 
               alt={title}

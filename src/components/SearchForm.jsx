@@ -45,7 +45,7 @@ export class SearchForm extends Component {
               placeholder="Movie to search" />
           </div>
           <div className="control">
-            <button className="button is-info">
+            <button className="button btn-search">
               Search
             </button>
           </div>

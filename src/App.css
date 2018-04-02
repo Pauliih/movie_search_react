@@ -1,6 +1,16 @@
 .App {
   padding-top: 2em;
   text-align: center;
+  background-color: #1D1D1D;
+}
+
+.title-page {
+  color: #5DA93C!important;
+}
+
+.btn-search {
+  background-color: #5DA93C!important;
+  color: #fff!important;
 }
 
 .SearchForm-wrapper {
@@ -18,4 +28,12 @@
 .MoviesList-item {
   margin-bottom: 1.5em;
   width: 48%;
+}
+
+.card-css {
+  border-radius: 8%;
+}
+
+.image img {
+  border-radius: 8% 8% 0 0;
 }
