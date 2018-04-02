@@ -4,7 +4,7 @@ import './App.css';
 import 'bulma/css/bulma.css';
 import { Title } from './components/Title';
 import { SearchForm } from './components/SearchForm';
-import {Movie} from './components/Movie';
+import { MoviesList } from './components/MoviesList';
 
 // 1 Instalamos Bulma: npm install bulma --save --save-exact
 
@@ -17,22 +17,6 @@ class App extends Component {
     this.setState({results})
   }
 
-  // Método _renderResults() para devolver el mapeado de cada pelicula del array
-  _renderResults() {
-    const {results} = this.state;
-    return results.map(movie => {
-      return (
-        <Movie 
-          key={movie.imdbID}
-          title={movie.Title}
-          year={movie.Year}
-          poster={movie.Poster}
-        />
-      )
-    })
-  }
-
-
   render() {
     return (
       <div className="App">
@@ -43,8 +27,8 @@ class App extends Component {
         </div>
           {this.state.results.length === 0
             ? <p>0 results founded...</p>
-            // Creamos un método llamado _renderResults que sólo se ejecuta si tenemos resultados
-            : this._renderResults()
+            // Le pasamos la prop movies que tendrá como valor el state results donde estan todas las peliculas encontradas
+            : <MoviesList movies={this.state.results}/>
           }        
       </div>
     );
